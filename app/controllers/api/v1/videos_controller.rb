@@ -1,6 +1,6 @@
 class Api::V1::VideosController < ApplicationController
   def index 
-    videos = Video.ApplicationController
+    videos = Video.All
 
     render json: videos
   end
