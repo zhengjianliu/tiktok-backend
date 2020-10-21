@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do 
       resources :videos
       resources :users
-      resources :favorvideos
+      resources :favor_videos
     end
   end
 
