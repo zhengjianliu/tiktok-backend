@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_21_175400) do
+ActiveRecord::Schema.define(version: 2020_10_21_032158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "favor_videos", force: :cascade do |t|
-    t.bigint "users_id", null: false
-    t.bigint "videos_id", null: false
-    t.index ["users_id"], name: "index_favor_videos_on_users_id"
-    t.index ["videos_id"], name: "index_favor_videos_on_videos_id"
+    t.bigint "user_id", null: false
+    t.string "video_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_favor_videos_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -30,14 +31,5 @@ ActiveRecord::Schema.define(version: 2020_10_21_175400) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "videos", force: :cascade do |t|
-    t.string "video_name"
-    t.string "author"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "video_id"
-  end
-
-  add_foreign_key "favor_videos", "users", column: "users_id"
-  add_foreign_key "favor_videos", "videos", column: "videos_id"
+  add_foreign_key "favor_videos", "users"
 end
