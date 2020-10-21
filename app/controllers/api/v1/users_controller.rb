@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   def index 
-    users = User.All
+    users = User.all
 
     render json: users
   end
@@ -25,3 +25,23 @@ class Api::V1::UsersController < ApplicationController
 
 
 end
+
+#  json should look like
+# users: {
+#   [
+#     {
+#       "id": "1",
+#       "username": "coderJay",
+#       "full_name": "Zhenjian Liu"
+#     },
+
+#     {
+#       "id": "2",
+#       "username": "jsonC",
+#       "full_name": "Jason Chilcott"
+#     },
+
+#     ...
+
+#   ]
+# }

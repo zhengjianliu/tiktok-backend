@@ -3,7 +3,7 @@ class Api::V1::FavorVideosController < ApplicationController
 
 
   def index 
-    favor_videos = Favor_videos.All
+    favor_videos = Favor_videos.all
 
     render json: favor_videos
   end
@@ -28,3 +28,32 @@ class Api::V1::FavorVideosController < ApplicationController
     params.require(:favor_video).permit(:video, :user)
   end
 end
+
+
+# proposed version without videos table??
+# "videoId" being youtube's hash video id 
+
+# favorVideos:
+# {
+#   "userInfo": [
+  
+#     "user_id": "1",
+#     "favorVideos": {
+#       "videoId": [
+#         "vfsutsfyfsyfoiyfos6gohuigsfo7f",
+#         "ysctufsyi6s8g8i6gsyfsyfhsfdftfy",
+#         ...
+#       ]
+#     }
+
+#     "user_id": "2",
+#     "favorVideos": {
+#       "videoId": [
+#         "vfsutsfyfsyfoiyfos6gohuigsfo7f",
+#         "ysctufsyi6s8g8i6gsyfsyfhsfdftfy"
+#       ]
+#     }
+
+
+#   ]
+# }

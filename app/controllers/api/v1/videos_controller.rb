@@ -1,6 +1,10 @@
 class Api::V1::VideosController < ApplicationController
+
+  # possibly get rid of videos table, model, contoller, routes 
+
+  
   def index 
-    videos = Video.All
+    videos = Video.all
 
     render json: videos
   end
