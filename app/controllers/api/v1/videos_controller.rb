@@ -10,7 +10,7 @@ class Api::V1::VideosController < ApplicationController
   end
 
   def show
-    video = video.find(params[:id])
+    video = Video.find(params[:id])
 
     render json: video
   end
