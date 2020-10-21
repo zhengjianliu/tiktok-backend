@@ -7,6 +7,8 @@ class Api::V1::FavorVideosController < ApplicationController
 
   def create
     favor_video = Favor_video.create!(favor_video_params)
+
+    render json: favor_video
   end
 
   def destroy
