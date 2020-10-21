@@ -1,7 +1,7 @@
 class FavorVideo < ApplicationRecord
   belongs_to :users
-  belongs_to :videos
-  # possibly get rid of videos?
+  #belongs_to :videos
+  
 end
 
 
