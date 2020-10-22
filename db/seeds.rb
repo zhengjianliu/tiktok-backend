@@ -23,3 +23,50 @@ users = [
 users.each do |user|
   User.create!(user)
 end
+
+
+
+# FavorVideos:
+# {
+#   "UserInfo": [
+#     "user_id": "1",
+#     "favorVideos": {
+#       "videoId": [
+#         "vfsutsfyfsyfoiyfos6gohuigsfo7f",
+#         "ysctufsyi6s8g8i6gsyfsyfhsfdftfy"
+#       ]
+#     }
+#
+#     "user_id": "2",
+#     "favorVideos": {
+#       "videoId": [
+#         "vfsutsfyfsyfoiyfos6gohuigsfo7f",
+#         "ysctufsyi6s8g8i6gsyfsyfhsfdftfy"
+#       ]
+#     }
+#   ]
+# }
+
+puts "Destroying favor_videos"
+FavorVideo.destroy_all
+puts "creating favor_videos"
+favor_videos = [
+  # {
+  #   "user_id": "1",
+  #   "favorVideos": {
+  #     "video_id": [
+  #       "vfsutsfyfsyfoiyfos6gohuigsfo7f",
+  #       "ysctufsyi6s8g8i6gsyfsyfhsfdftfy"
+  #     ]
+  #   }
+  # }
+  {
+    "user_id": "1",
+    "video_id":"vfsutsfyfsyfoiyfos6gohuigsfo7f"
+  }
+]
+
+
+favor_videos.each do |favor|
+  FavorVideo.create!(favor)
+end
