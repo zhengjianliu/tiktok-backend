@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2020_10_21_175400) do
   create_table "favor_videos", force: :cascade do |t|
     t.bigint "users_id", null: false
     t.bigint "videos_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["users_id"], name: "index_favor_videos_on_users_id"
     t.index ["videos_id"], name: "index_favor_videos_on_videos_id"
   end
