@@ -1,18 +1,15 @@
 class Api::V1::UsersController < ApplicationController
-<<<<<<< HEAD
 
     def index
       users = User.all
       render json: users, only: [:id, :fullName, :userName, :password]
     end
 
-=======
   def index
     users = User.all
 
     render json: users
-cd   end
->>>>>>> main
+  end
 
   def create
     user = User.create!(user_params)
