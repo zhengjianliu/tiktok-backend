@@ -16,8 +16,23 @@ ActiveRecord::Schema.define(version: 2020_10_21_032158) do
   enable_extension "plpgsql"
 
   create_table "favor_videos", force: :cascade do |t|
+<<<<<<< HEAD
     t.bigint "user_id", null: false
     t.string "video_id"
+=======
+    t.bigint "users_id", null: false
+    t.bigint "videos_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["users_id"], name: "index_favor_videos_on_users_id"
+    t.index ["videos_id"], name: "index_favor_videos_on_videos_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "full_name"
+    t.string "password"
+>>>>>>> main
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_favor_videos_on_user_id"
