@@ -5,9 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts "Destroying users"
+
+puts "reset and finish seeding"
+
 User.destroy_all
-puts "creating users"
+Favor.destroy_all
+
 users = [
   {
     userName: "Jayliu1234",
@@ -20,53 +23,25 @@ users = [
     password: "54321"
   }
 ]
+
+
 users.each do |user|
   User.create!(user)
 end
 
 
-
-# FavorVideos:
-# {
-#   "UserInfo": [
-#     "user_id": "1",
-#     "favorVideos": {
-#       "videoId": [
-#         "vfsutsfyfsyfoiyfos6gohuigsfo7f",
-#         "ysctufsyi6s8g8i6gsyfsyfhsfdftfy"
-#       ]
-#     }
-#
-#     "user_id": "2",
-#     "favorVideos": {
-#       "videoId": [
-#         "vfsutsfyfsyfoiyfos6gohuigsfo7f",
-#         "ysctufsyi6s8g8i6gsyfsyfhsfdftfy"
-#       ]
-#     }
-#   ]
-# }
-
-puts "Destroying favor_videos"
-FavorVideo.destroy_all
-puts "creating favor_videos"
-favor_videos = [
-  # {
-  #   "user_id": "1",
-  #   "favorVideos": {
-  #     "video_id": [
-  #       "vfsutsfyfsyfoiyfos6gohuigsfo7f",
-  #       "ysctufsyi6s8g8i6gsyfsyfhsfdftfy"
-  #     ]
-  #   }
-  # }
+favors = [
   {
-    "user_id": "1",
-    "video_id":"vfsutsfyfsyfoiyfos6gohuigsfo7f"
+    user_id: 1,
+    favor_videos:"WcL3jC6UsMA"
+  },
+  {
+    user_id: 2,
+    favor_videos: "WcL3jC6UsMA"
   }
 ]
 
 
-favor_videos.each do |favor|
-  FavorVideo.create!(favor)
+favors.each do |video|
+  Favor.create!(video)
 end
