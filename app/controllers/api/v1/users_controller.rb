@@ -1,9 +1,18 @@
 class Api::V1::UsersController < ApplicationController
+<<<<<<< HEAD
+
+    def index
+      users = User.all
+      render json: users, only: [:id, :fullName, :userName, :password]
+    end
+
+=======
   def index
     users = User.all
 
     render json: users
 cd   end
+>>>>>>> main
 
   def create
     user = User.create!(user_params)
@@ -20,7 +29,7 @@ cd   end
   private
 
   def user_params
-    params.require(:user).permit(:username, :full_name, :password)
+    params.require(:user).permit(:userName, :fullName, :password)
   end
 
 
