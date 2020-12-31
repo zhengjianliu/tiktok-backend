@@ -1,24 +1,23 @@
-# README
+<h1 align="center" color="lightgrey">Welcome to TikTok Web App Clone</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+>The web version of TikTok uses YouTube API to generate video feed and provides a user experience similar to TikTok
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+### 🏠 [LiveDemo](https://flatirontiktok.netlify.app/) | [Frontend](https://github.com/zhengjianliu/tiktok-frontend) | [Backend](https://github.com/zhengjianliu/tiktok-backend)
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+## Author
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **ZHENGJIAN(JAY) LIU**
 
-* Deployment instructions
+-   Github: [@ZHENGJIANLIU](https://github.com/zhengjianliu)
+-   Linkedin [@Linkedin](https://www.linkedin.com/in/zhengjian-jay-liu-33776553/)
+-   Website [@Website](https://www.zhengjianliu.com)
 
-* ...
+## Show your support
+
+Give a ⭐️ if you like this project!
+
